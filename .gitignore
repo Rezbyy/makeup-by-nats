@@ -7,6 +7,10 @@ node_modules/
 # Full-res image backups — too large for git (412MB), keep locally
 assets/images/originals-fullres/
 
+# Claude Code files — internal dev tooling
+CLAUDE.md
+.claude/
+
 # macOS
 .DS_Store
 
