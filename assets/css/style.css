@@ -846,6 +846,21 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
   color: var(--gray); margin-top: 6px; display: block;
 }
 
+/* Bridal guide download */
+.guide-section { padding: var(--section-pad) 60px; background: var(--cream); }
+.guide-card {
+  max-width: 720px; margin: 0 auto; text-align: center;
+  background: var(--white); border: 1px solid var(--nude); padding: 70px 60px;
+}
+.guide-icon {
+  width: 64px; height: 64px; margin: 0 auto 28px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--nude); border-radius: 50%; color: var(--gold-deep);
+}
+.guide-icon svg { width: 28px; height: 28px; }
+.guide-card h2 { margin-bottom: 18px; }
+.guide-card p { color: var(--mid-gray); max-width: 480px; margin: 0 auto 34px; line-height: 1.8; }
+
 /* Love Notes editorial section */
 .love-notes-section { background: var(--black); padding: var(--section-pad) 60px; overflow: hidden; }
 .love-notes-inner { display: flex; gap: 60px; align-items: stretch; max-width: 1200px; margin: 0 auto; }
@@ -978,7 +993,8 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
 
 @media (max-width: 900px) {
   .intro-section { grid-template-columns: 1fr; }
-  .intro-image { height: 60vw; }
+  .intro-image { height: 75vw; max-height: 560px; }
+  .intro-image img { object-position: center 20%; transform: scale(1); }
   .intro-content { padding: 70px 40px; }
   .story-grid { grid-template-columns: 1fr; }
   .service-detail-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1020,15 +1036,34 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
   .enquiry-form-section { padding-left: 24px; padding-right: 24px; }
   .form-group.full, .form-submit { grid-column: span 1; }
   .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+  .page-hero-content { padding: 0 24px 48px; }
+  .page-hero-content h1 { font-size: clamp(2rem, 7vw, 2.6rem); }
   .services-grid { grid-template-columns: 1fr; }
   .services-grid .service-card:last-child { grid-column: span 1; aspect-ratio: 3/4; }
   .faq-section, .bridal-intro, .love-notes-section, .gallery-page, .before-after-section,
-  .contact-page, .story-section, .values-section, .team-section { padding-left: 24px; padding-right: 24px; }
+  .contact-page, .story-section, .values-section, .team-section, .guide-section,
+  .highlights-section { padding-left: 24px; padding-right: 24px; }
+  .contact-info { min-width: 0; }
+  .social-links-row { flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .social-link-large { flex: 1 1 calc(50% - 6px); justify-content: center; }
   .footer-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .love-notes-inner { flex-direction: column; gap: 32px; }
   .love-notes-label { writing-mode: horizontal-tb; transform: none; }
   .love-notes-grid { grid-template-columns: 1fr; }
+  .guide-card { padding: 48px 26px; }
+  /* Highlights → horizontal swipe strip */
+  .highlights-grid {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 82%;
+    gap: 14px; margin-top: 40px; overflow-x: auto;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin-left: -24px; margin-right: -24px; padding: 4px 24px 18px; scroll-padding-left: 24px;
+  }
+  .highlights-grid::-webkit-scrollbar { height: 4px; }
+  .highlights-grid::-webkit-scrollbar-thumb { background: var(--nude); border-radius: 4px; }
+  .highlights-grid::-webkit-scrollbar-track { background: transparent; }
+  .highlight-item { scroll-snap-align: start; padding: 36px 28px; }
+  .highlight-date { font-size: 3rem; }
 }
 
 @media (max-width: 480px) {
