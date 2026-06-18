@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="logo-transparent" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="-1 -1 -1 0 1  -1 -1 -1 0 1  -1 -1 -1 0 1  -1 -1 -1 0 1"/>
+    </filter>
+  </defs>
+</svg>

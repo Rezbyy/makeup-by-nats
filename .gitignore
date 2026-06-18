@@ -1,0 +1,14 @@
+# Environment variables — contains passwords, NEVER commit
+.env
+
+# Node dependencies — restore with: npm install
+node_modules/
+
+# Full-res image backups — too large for git (412MB), keep locally
+assets/images/originals-fullres/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

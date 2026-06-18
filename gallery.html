@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Makeup by Nats</title>
+  <meta name="description" content="Browse the Makeup by Nats portfolio: bridal, cultural, and event makeup artistry in New Zealand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Gallery masonry — row height scales with column width so portrait
+       cells always hold a true 2:3 frame (no face-cropping) at any screen size.
+       3 cols: colW = (100vw - 120px padding - 16px gaps)/3; row = 0.75*colW - 4. */
+    .gallery-masonry {
+      gap: 10px;
+      grid-auto-rows: calc((100vw - 136px) / 4 - 4px);
+    }
+    .gallery-grid-item[data-size="tall"] { grid-row: span 2; }   /* portraits → 2:3 */
+    .gallery-grid-item[data-size="wide"] { grid-column: span 2; grid-row: span 1; }
+
+    @media (max-width: 900px) { /* 2 columns, 60px side padding */
+      .gallery-masonry { grid-auto-rows: calc((100vw - 130px) * 0.375 - 4px); }
+    }
+    @media (max-width: 768px) { /* 2 columns, 24px side padding */
+      .gallery-masonry { grid-auto-rows: calc((100vw - 58px) * 0.375 - 4px); }
+    }
+    @media (max-width: 480px) { /* 1 column, 24px side padding */
+      .gallery-masonry { grid-auto-rows: calc((100vw - 48px) * 0.75 - 4px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader">
+    <div class="loader-logo">
+      <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="loader-logo-img" />
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="site-logo">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="bridal.html">Bridal</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html" class="nav-book">Book Now</a>
+    </div>
+    <a href="book.html" class="nav-book-mobile" aria-label="Book Now">Book Now</a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="bridal.html">Bridal</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="book.html" class="nav-mobile-book">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('assets/images/work/IMG_2227.jpg'); background-position: center 38%;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+
+      <span class="eyebrow">Portfolio</span>
+      <h1>Beauty<br>in every<em> detail</em></h1>
+      <p>A collection of looks that tell the stories of our most beautiful moments together.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-page">
+    <div class="section-header" style="text-align:left; margin-bottom:40px;">
+      <span class="eyebrow reveal">Filter by</span>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="western">Western Bridal</button>
+      <button class="filter-btn" data-filter="cultural">Cultural Bridal</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <!-- MASONRY GRID -->
+    <div class="gallery-masonry">
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/LaurenTahu-0489.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural" data-size="tall">
+        <img src="assets/images/work/Reception-21.jpg" alt="Cultural Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Cultural Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events" data-size="tall">
+        <img src="assets/images/work/1000007358.jpg" alt="Special Events" loading="lazy" style="object-position: center 40%;" />
+        <div class="gallery-item-info"><span>Special Events</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A3368.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural" data-size="tall">
+        <img src="assets/images/work/WeddingDay-890.jpg" alt="Cultural Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Cultural Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western">
+        <img src="assets/images/work/DSCF3426.jpg" alt="Bridal Party" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Bridal Party</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural">
+        <img src="assets/images/Amended/Gallery/Photo%205.jpg" alt="Destination Wedding" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Destination Wedding</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events" data-size="tall">
+        <img src="assets/images/work/IMG_2227.jpg" alt="Destination Wedding" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Destination Wedding</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A3157.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural" data-size="tall">
+        <img src="assets/images/work/Reception-109.jpg" alt="Cultural Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Cultural Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events" data-size="tall">
+        <img src="assets/images/work/DSCF3539.jpg" alt="Special Events" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Special Events</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A3984.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western">
+        <img src="assets/images/work/LaurenTahu-3573.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural">
+        <img src="assets/images/Amended/Gallery/Photo%2010.jpg" alt="Destination Wedding" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Destination Wedding</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural" data-size="tall">
+        <img src="assets/images/work/Reception-211.jpg" alt="Cultural Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Cultural Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events" data-size="tall">
+        <img src="assets/images/work/P&EWedding-108.jpg" alt="Special Events" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Special Events</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/P&EWedding-797.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events" data-size="tall">
+        <img src="assets/images/Amended/Gallery/DSC04237.jpg" alt="Bridal Party" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Bridal Party</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/Amended/Gallery/DSCF0430.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western">
+        <img src="assets/images/Amended/Gallery/A&DWeddingGallery-521.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural">
+        <img src="assets/images/Amended/Gallery/Photo%2011.jpg" alt="Destination Wedding" loading="lazy" style="object-position: center 55%;" />
+        <div class="gallery-item-info"><span>Destination Wedding</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/Amended/Gallery/A&DWeddingGallery-144.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A4340.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/Amended/Gallery/P&EWedding-814.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A4156.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 42%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/Amended/Gallery/P&EWedding-785.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western">
+        <img src="assets/images/Amended/Gallery/DSCF1758.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural">
+        <img src="assets/images/Amended/Gallery/Photo%2012.jpg" alt="Destination Wedding" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Destination Wedding</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/0N9A3618.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="western" data-size="tall">
+        <img src="assets/images/work/P&EWedding-664.jpg" alt="Western Bridal" loading="lazy" style="object-position: center 30%;" />
+        <div class="gallery-item-info"><span>Western Bridal</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="events">
+        <img src="assets/images/Amended/Gallery/DSCF1112.jpg" alt="Bridal Party" loading="lazy" style="object-position: center 35%;" />
+        <div class="gallery-item-info"><span>Bridal Party</span></div>
+      </div>
+
+      <div class="gallery-grid-item" data-category="cultural">
+        <img src="assets/images/Amended/Gallery/1000116589.jpg" alt="Cultural Bridal" loading="lazy" style="object-position: center 50%;" />
+        <div class="gallery-item-info"><span>Cultural Bridal</span></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-content reveal">
+      <span class="eyebrow">Begin Your Journey</span>
+      <h2>Let's create your<br><em>perfect bridal glam</em></h2>
+      <p>Every photo in this gallery represents a real bride, a real moment, and a real transformation. Yours could be next.</p>
+      <div class="cta-btns">
+        <a href="book.html" class="btn btn-gold">Book Now</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="site-logo">
+            </a>
+        <p>Luxury bridal and destination makeup artist specialising in western and cultural weddings, with over 10 years of experience creating timeless, elevated beauty.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/makeupby.nats" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">Ig</a>
+          <a href="https://www.facebook.com/makeupbynats01/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">Fb</a>
+          <a href="https://www.tiktok.com/@makeupbynats" target="_blank" rel="noopener" class="footer-social" aria-label="TikTok">Tk</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigate</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bridal.html">Bridal Enquiries</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="services.html#western">Western Weddings</a></li>
+          <li><a href="services.html#cultural">Cultural Weddings</a></li>
+          <li><a href="services.html#events">Special Events</a></li>
+          <li><a href="services.html#education">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-row">
+          <span class="lbl">Email</span>
+          <a href="mailto:Makeupbynats101@gmail.com">Makeupbynats101@gmail.com</a>
+        </div>
+        <div class="footer-contact-row">
+          <span class="lbl">Location</span>
+          <span>Hamilton, New Zealand</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="lbl">Booking</span>
+          <a href="https://bookings.gettimely.com/makeupbynats/bb/book" target="_blank" rel="noopener">Book Online →</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Makeup by Nats. All rights reserved.</p>
+      <div class="footer-gold-bar"></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

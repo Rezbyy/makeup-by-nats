@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now | Makeup by Nats</title>
+  <meta name="description" content="Book a makeup appointment or submit a bridal enquiry with Makeup by Nats, based in Hamilton, New Zealand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .book-options-section { padding-left: 24px !important; padding-right: 24px !important; }
+      .book-options-grid { grid-template-columns: 1fr !important; }
+      .book-option-card { padding: 36px 28px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader">
+    <div class="loader-logo">
+      <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="loader-logo-img" />
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="site-logo">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="bridal.html">Bridal</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html" class="nav-book active">Book Now</a>
+    </div>
+    <a href="book.html" class="nav-book-mobile" aria-label="Book Now">Book Now</a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="bridal.html">Bridal</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="book.html" class="nav-mobile-book">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('assets/images/work/P&EWedding-664.jpg'); background-position: center 50%;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+
+      <span class="eyebrow">Reserve Your Date</span>
+      <h1>Let's make your<br>day <em>unforgettable</em></h1>
+      <p>Choose the booking option that suits you. Nats is ready to help.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING OPTIONS -->
+  <section class="book-options-section" style="padding: var(--section-pad) 60px; background: var(--cream);">
+    <div class="section-header reveal" style="margin-bottom: 60px;">
+      <span class="eyebrow">Choose Your Booking Type</span>
+      <h2>How would you like<br><em>to book?</em></h2>
+    </div>
+
+    <div class="book-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 960px; margin: 0 auto;">
+
+      <!-- OPTION 1: MAKEUP APPOINTMENT -->
+      <div class="book-option-card reveal" style="background: var(--black); padding: 52px 44px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+        <span style="font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 600;">Option 01</span>
+        <h3 style="color: var(--white); font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; line-height: 1.15;">Makeup<br><em>Appointment</em></h3>
+        <p style="color: rgba(255,255,255,0.5); line-height: 1.85; font-size: 0.875rem; flex: 1;">For school balls, special events, photoshoots, and any non-bridal booking. Book directly through Nats' online scheduling system and choose a date and time that works for you, with instant confirmation.</p>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; width: 100%;">
+          <li style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.45); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold);">✦</span> Instant online confirmation</li>
+          <li style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.45); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold);">✦</span> School balls &amp; proms</li>
+          <li style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.45); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold);">✦</span> Special events &amp; photoshoots</li>
+        </ul>
+        <a href="https://bookings.gettimely.com/makeupbynats/bb/book" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top: 8px; width: 100%; justify-content: center; text-align: center;">Book via GetTimely →</a>
+      </div>
+
+      <!-- OPTION 2: BRIDAL ENQUIRY -->
+      <div class="book-option-card reveal delay-2" style="background: var(--white); border: 1px solid var(--nude); padding: 52px 44px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+        <span style="font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">Option 02</span>
+        <h3 style="color: var(--black); font-family: var(--font-heading); font-size: 2.2rem; font-weight: 400; line-height: 1.15;">Bridal<br><em>Enquiry</em></h3>
+        <p style="color: var(--mid-gray); line-height: 1.85; font-size: 0.875rem; flex: 1;">For weddings, bridal trials, and cultural ceremonies. Fill in the detailed enquiry form below and Nats will be in touch within 2–3 business days to confirm availability and discuss your perfect look.</p>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; width: 100%;">
+          <li style="display: flex; align-items: center; gap: 10px; color: var(--mid-gray); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold-deep);">✦</span> Western &amp; cultural weddings</li>
+          <li style="display: flex; align-items: center; gap: 10px; color: var(--mid-gray); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold-deep);">✦</span> Bridal trials</li>
+          <li style="display: flex; align-items: center; gap: 10px; color: var(--mid-gray); font-size: 0.8rem; font-family: var(--font-body); letter-spacing: 0.03em;"><span style="color: var(--gold-deep);">✦</span> Bridal party &amp; family</li>
+        </ul>
+        <a href="#bridal-enquiry" class="btn btn-dark" style="margin-top: 8px; width: 100%; justify-content: center; text-align: center;">Complete Enquiry Form →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRIDAL ENQUIRY FORM -->
+  <section class="enquiry-form-section" id="bridal-enquiry">
+    <div class="section-header reveal">
+      <span class="eyebrow" style="color:var(--gold);">Bridal Enquiry</span>
+      <h2 style="color:var(--white);">Tell Nats about<br><em>your wedding day</em></h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.45); margin:0 auto; text-align:center;">Fill in as much detail as possible and Nats will be in touch within 2–3 business days.</p>
+    </div>
+    <div class="form-wrap reveal delay-2">
+      <form class="enquiry-form" id="bridal-enquiry-form" novalidate>
+
+        <!-- ROW 1: NAME -->
+        <div class="form-group">
+          <label for="b-first-name">First Name *</label>
+          <input type="text" id="b-first-name" name="first-name" placeholder="Your first name" required />
+        </div>
+        <div class="form-group">
+          <label for="b-last-name">Last Name *</label>
+          <input type="text" id="b-last-name" name="last-name" placeholder="Your last name" required />
+        </div>
+
+        <!-- ROW 2: CONTACT -->
+        <div class="form-group">
+          <label for="b-email">Email Address *</label>
+          <input type="email" id="b-email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Phone Number *</label>
+          <input type="tel" id="b-phone" name="phone" placeholder="+64 XX XXX XXXX" required />
+        </div>
+
+        <!-- ROW 3: DATE + TIME -->
+        <div class="form-group">
+          <label for="b-wedding-date">Wedding Date *</label>
+          <input type="date" id="b-wedding-date" name="wedding-date" required />
+        </div>
+        <div class="form-group">
+          <label for="b-ready-time">What Time Do You Need to Be Ready By? *</label>
+          <input type="time" id="b-ready-time" name="ready-time" required />
+        </div>
+
+        <!-- ROW 4: PARTY SIZE (FULL) -->
+        <div class="form-group full">
+          <label for="b-party-size">Number of People Needing Makeup? *</label>
+          <input type="text" id="b-party-size" name="party-size" placeholder="Ex: Bride x 1, Bridesmaid x 4, Mothers x 2..." required />
+        </div>
+
+        <!-- ROW 5: LOCATION (FULL) -->
+        <div class="form-group full">
+          <label for="b-location">Where Would You Be Getting Ready? *</label>
+          <input type="text" id="b-location" name="location" placeholder="Full address or venue name" required />
+        </div>
+
+        <!-- ROW 6: CULTURAL -->
+        <div class="form-group">
+          <label for="b-cultural">Are You Having a Cultural Wedding? *</label>
+          <select id="b-cultural" name="cultural-wedding" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <!-- ROW 7: TRIAL (FULL) -->
+        <div class="form-group full">
+          <label for="b-trial">Would You Like a Bridal Makeup Trial? * <span style="font-weight:400; text-transform:none; letter-spacing:0; font-size:0.75rem; color:var(--gold); margin-left:4px;">(Highly Recommended for All Brides)</span></label>
+          <select id="b-trial" name="bridal-trial" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="yes">Yes, I'd love a trial</option>
+            <option value="no">No, I'll skip the trial</option>
+          </select>
+        </div>
+
+        <!-- ROW 8: VENDORS -->
+        <div class="form-group">
+          <label for="b-hairstylist">Have You Got Your Hairstylist Booked? *</label>
+          <input type="text" id="b-hairstylist" name="hairstylist" placeholder="Name of stylist, or 'No, I'd love recommendations'" required />
+        </div>
+        <div class="form-group">
+          <label for="b-photographer">Have You Got a Photographer Booked? If Yes, Who? *</label>
+          <input type="text" id="b-photographer" name="photographer" placeholder="Photographer's name, or 'Not yet'" required />
+        </div>
+
+        <!-- ROW 9: SOCIAL + DISCOVERY -->
+        <div class="form-group">
+          <label for="b-instagram">What's Your Instagram? <span style="font-weight:400; text-transform:none; letter-spacing:0; font-size:0.75rem; color:rgba(255,255,255,0.3);">(Optional)</span></label>
+          <input type="text" id="b-instagram" name="instagram" placeholder="@yourhandle" />
+        </div>
+        <div class="form-group">
+          <label for="b-how-heard">How Did You Hear About Nats? *</label>
+          <select id="b-how-heard" name="how-heard" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="tiktok">TikTok</option>
+            <option value="google">Google Search</option>
+            <option value="word-of-mouth">Word of Mouth</option>
+            <option value="wedding-directory">Wedding Directory</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="form-submit">
+          <button type="submit" class="btn btn-gold">Send Enquiry →</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/logo-white-trimmed.png" alt="Makeup by Nats" class="site-logo">
+            </a>
+        <p>Luxury bridal and destination makeup artist specialising in western and cultural weddings, with over 10 years of experience creating timeless, elevated beauty.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/makeupby.nats" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">Ig</a>
+          <a href="https://www.facebook.com/makeupbynats01/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">Fb</a>
+          <a href="https://www.tiktok.com/@makeupbynats" target="_blank" rel="noopener" class="footer-social" aria-label="TikTok">Tk</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Navigate</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bridal.html">Bridal Enquiries</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="services.html#western">Western Weddings</a></li>
+          <li><a href="services.html#cultural">Cultural Weddings</a></li>
+          <li><a href="services.html#events">Special Events</a></li>
+          <li><a href="services.html#education">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-row">
+          <span class="lbl">Email</span>
+          <a href="mailto:Makeupbynats101@gmail.com">Makeupbynats101@gmail.com</a>
+        </div>
+        <div class="footer-contact-row">
+          <span class="lbl">Location</span>
+          <span>Hamilton, New Zealand</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="lbl">Booking</span>
+          <a href="https://bookings.gettimely.com/makeupbynats/bb/book" target="_blank" rel="noopener">Book Online →</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Makeup by Nats. All rights reserved.</p>
+      <div class="footer-gold-bar"></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Bridal enquiry form submission — powered by Web3Forms (no server needed) -->
+  <script>
+  (function () {
+    const form = document.getElementById('bridal-enquiry-form');
+    if (!form) return;
+
+    const submitBtn   = form.querySelector('button[type="submit"]');
+    const originalTxt = submitBtn.textContent;
+
+    // ── Readable labels for select values ─────────────────────────────────
+    const yesNoMap  = { yes: 'Yes', no: 'No', na: 'Not Applicable' };
+    const trialMap  = { yes: 'Yes, trial requested', no: 'No, skipping trial' };
+    const sourceMap = {
+      instagram         : 'Instagram',
+      facebook          : 'Facebook',
+      tiktok            : 'TikTok',
+      google            : 'Google Search',
+      'word-of-mouth'   : 'Word of Mouth',
+      'wedding-directory': 'Wedding Directory',
+      other             : 'Other',
+    };
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      clearError();
+
+      // ── Collect field values ───────────────────────────────────────────
+      const d = {
+        firstName        : form.elements['first-name'].value.trim(),
+        lastName         : form.elements['last-name'].value.trim(),
+        email            : form.elements['email'].value.trim(),
+        phone            : form.elements['phone'].value.trim(),
+        weddingDate      : form.elements['wedding-date'].value,
+        readyTime        : form.elements['ready-time'].value,
+        partySize        : form.elements['party-size'].value.trim(),
+        location         : form.elements['location'].value.trim(),
+        culturalWedding  : form.elements['cultural-wedding'].value,
+        bridalTrial      : form.elements['bridal-trial'].value,
+        hairstylist      : form.elements['hairstylist'].value.trim(),
+        photographer     : form.elements['photographer'].value.trim(),
+        instagram        : form.elements['instagram'].value.trim(),
+        howHeard         : form.elements['how-heard'].value,
+      };
+
+      const fullName = d.firstName + ' ' + d.lastName;
+
+      // ── Loading state ──────────────────────────────────────────────────
+      submitBtn.textContent   = 'Sending…';
+      submitBtn.disabled      = true;
+      submitBtn.style.opacity = '0.65';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method : 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body   : JSON.stringify({
+            // ── Web3Forms config ─────────────────────────────────────────
+            access_key : '40109b7d-8fb6-48b9-80c7-3ca88c578070',
+            subject    : '✨ New Bridal Enquiry: ' + fullName,
+            from_name  : fullName,
+            email      : d.email,   // Web3Forms uses this as reply-to
+
+            // ── Contact Details ──────────────────────────────────────────
+            'Full Name'  : fullName,
+            'Email'      : d.email,
+            'Phone'      : d.phone,
+            'Instagram'  : d.instagram || 'N/A',
+
+            // ── Wedding Details ──────────────────────────────────────────
+            'Wedding Date'          : d.weddingDate,
+            'Ready By'              : d.readyTime,
+            'Getting Ready At'      : d.location,
+            'People Needing Makeup' : d.partySize,
+
+            // ── Services & Preferences ───────────────────────────────────
+            'Cultural Wedding'          : yesNoMap[d.culturalWedding]  || d.culturalWedding,
+            'Bridal Makeup Trial'       : trialMap[d.bridalTrial]      || d.bridalTrial,
+
+            // ── Vendors & Discovery ──────────────────────────────────────
+            'Hairstylist'         : d.hairstylist,
+            'Photographer'        : d.photographer,
+            'How They Found Nats' : sourceMap[d.howHeard] || d.howHeard,
+          }),
+        });
+
+        const result = await res.json();
+        if (!result.success) throw new Error(result.message || 'Submission failed. Please try again.');
+
+        // ── Success ────────────────────────────────────────────────────
+        document.getElementById('bridal-enquiry').innerHTML = `
+          <div style="text-align:center; padding:100px 40px 120px;">
+            <p style="font-family:var(--font-body); font-size:0.6rem; letter-spacing:0.45em;
+                      text-transform:uppercase; color:var(--gold); margin:0 0 20px;">
+              Enquiry Received
+            </p>
+            <h2 style="color:var(--white); font-family:var(--font-heading);
+                       font-size:clamp(2.4rem,5vw,3.6rem); font-weight:300;
+                       line-height:1.2; margin:0 0 24px;">
+              Thank you,&nbsp;<em>${d.firstName}!</em>
+            </h2>
+            <p style="color:rgba(255,255,255,0.5); max-width:480px; margin:0 auto 48px;
+                      line-height:1.9; font-family:var(--font-body); font-size:0.9rem;">
+              Your bridal enquiry has been sent to Nats. She&rsquo;ll be in touch within
+              2&ndash;3 business days to confirm availability and discuss your perfect look.
+            </p>
+            <a href="index.html" class="btn btn-gold">Back to Home &rarr;</a>
+          </div>`;
+
+      } catch (err) {
+        submitBtn.textContent   = originalTxt;
+        submitBtn.disabled      = false;
+        submitBtn.style.opacity = '1';
+        showError(err.message);
+      }
+    });
+
+    function showError(msg) {
+      clearError();
+      const el = document.createElement('p');
+      el.id = 'enquiry-error';
+      el.style.cssText = [
+        'grid-column:span 2', 'text-align:center', 'color:#e07070',
+        'font-family:var(--font-body)', 'font-size:0.85rem',
+        'margin:12px 0 0', 'padding:14px 20px',
+        'background:rgba(224,112,112,0.08)',
+        'border:1px solid rgba(224,112,112,0.25)',
+      ].join(';');
+      el.textContent = msg;
+      submitBtn.closest('.form-submit').insertAdjacentElement('afterend', el);
+    }
+
+    function clearError() {
+      const existing = document.getElementById('enquiry-error');
+      if (existing) existing.remove();
+    }
+  })();
+  </script>
+</body>
+</html>
