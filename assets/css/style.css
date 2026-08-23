@@ -1167,6 +1167,15 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
   max-width: 1240px; margin: 60px auto 0; background: var(--nude);
 }
+/* 7 items never fill a 3- or 2-column row, and the leftover cells would show
+   the grid's nude background as an empty block, so the last one spans the row */
+.mc-learn-item:last-child { grid-column: 1 / -1; }
+@media (min-width: 769px) {
+  .mc-learn-item:last-child {
+    flex-direction: row; align-items: center; justify-content: center;
+    gap: 22px; text-align: center;
+  }
+}
 .mc-learn-item {
   background: var(--white); padding: 44px 38px;
   display: flex; flex-direction: column; gap: 16px;
