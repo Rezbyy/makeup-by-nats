@@ -1083,3 +1083,147 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
 .highlight-item:hover { border-color: var(--gold); }
 .highlight-date { font-family: var(--font-heading); font-size: 3.5rem; color: var(--gold-deep); line-height: 1; margin-bottom: 12px; }
 .highlight-label { font-size: 0.95rem; color: var(--mid-gray); line-height: 1.6; }
+
+/* ================================================
+   MASTERCLASS PAGE
+   ================================================ */
+.mc-product { padding: var(--section-pad) 60px; }
+.mc-product-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 70px;
+  max-width: 1240px; margin: 0 auto; align-items: start;
+}
+
+/* Gallery */
+/* min-width:0 is required: grid items default to min-width:auto, and the
+   swiper's slide row would otherwise blow the column out to its full width */
+.mc-gallery { position: relative; min-width: 0; }
+.mc-swiper { overflow: hidden; background: var(--cream); width: 100%; }
+/* neutralise the global testimonial-swiper wrapper padding */
+.mc-swiper .swiper-wrapper,
+.mc-thumbs .swiper-wrapper { padding-bottom: 0 !important; }
+.mc-swiper .swiper-slide { aspect-ratio: 4/5; }
+.mc-swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+.mc-swiper .mc-arrow {
+  width: 42px; height: 42px; background: rgba(255,255,255,0.92);
+  color: var(--black); border-radius: 50%; transition: var(--t);
+}
+.mc-swiper .mc-arrow::after { font-size: 0.85rem; font-weight: 700; }
+.mc-swiper .mc-arrow:hover { background: var(--white); }
+.mc-swiper .mc-pagination { bottom: 14px !important; }
+.mc-swiper .swiper-pagination-bullet { background: rgba(255,255,255,0.55) !important; opacity: 1; }
+.mc-swiper .swiper-pagination-bullet-active { background: var(--white) !important; }
+
+.mc-thumbs { margin-top: 12px; overflow: hidden; width: 100%; }
+.mc-thumbs .swiper-slide {
+  aspect-ratio: 4/5; opacity: 0.42; cursor: pointer;
+  border: 1px solid transparent; transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+.mc-thumbs .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+.mc-thumbs .swiper-slide-thumb-active { opacity: 1; border-color: var(--gold-deep); }
+
+/* Buy panel */
+.mc-buy { position: sticky; top: calc(var(--nav-h) + 30px); min-width: 0; }
+.mc-buy .eyebrow { display: block; margin-bottom: 16px; }
+.mc-buy h2 { margin-bottom: 30px; }
+.mc-details { list-style: none; border-top: 1px solid var(--nude); margin-bottom: 34px; }
+.mc-details li {
+  display: flex; gap: 20px; padding: 15px 2px;
+  border-bottom: 1px solid var(--nude);
+}
+.mc-details .lbl {
+  flex: 0 0 92px; font-size: 0.6rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gray); font-weight: 600; padding-top: 4px;
+}
+.mc-details .val { font-size: 1rem; color: var(--black); }
+
+.mc-price-block { margin-bottom: 28px; }
+.mc-price {
+  font-family: var(--font-heading); font-size: 3.2rem; line-height: 1; color: var(--black);
+}
+.mc-price span { font-size: 1.1rem; color: var(--gray); letter-spacing: 0.1em; }
+.mc-afterpay {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+  font-size: 0.78rem; color: var(--mid-gray);
+}
+.mc-afterpay-logo { width: 90px; height: auto; }
+.mc-buy-btn { width: 100%; justify-content: center; }
+.mc-secure {
+  margin-top: 14px; font-size: 0.68rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gray); text-align: center;
+}
+
+/* Intro */
+.mc-intro { background: var(--cream); padding: var(--section-pad) 60px; }
+.mc-intro-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.mc-intro-lead {
+  font-family: var(--font-heading); font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-style: italic; color: var(--black); line-height: 1.5; margin-bottom: 20px;
+}
+.mc-intro-inner p { font-size: 1rem; line-height: 1.9; }
+
+/* What you'll learn */
+.mc-learn { padding: var(--section-pad) 60px; }
+.mc-learn-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  max-width: 1240px; margin: 60px auto 0; background: var(--nude);
+}
+.mc-learn-item {
+  background: var(--white); padding: 44px 38px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: background 0.35s ease;
+}
+.mc-learn-item:hover { background: var(--cream); }
+.mc-learn-num {
+  font-family: var(--font-heading); font-size: 2.4rem; line-height: 1;
+  color: var(--gold-deep);
+}
+.mc-learn-item p { margin: 0; font-size: 0.95rem; line-height: 1.75; }
+
+/* Sponsors */
+.mc-sponsors { background: var(--cream); padding: 80px 60px; text-align: center; }
+.mc-sponsors .eyebrow { display: block; margin-bottom: 34px; }
+.mc-sponsors-strip { max-width: 532px; width: 100%; margin: 0 auto; }
+
+/* Closing */
+.mc-closing { background: var(--black); padding: var(--section-pad) 60px; text-align: center; }
+.mc-closing-inner { max-width: 760px; margin: 0 auto; }
+.mc-closing h2 { color: var(--white); margin-bottom: 38px; }
+.mc-closing .mc-afterpay {
+  justify-content: center; color: rgba(255,255,255,0.6); margin-top: 20px;
+}
+.mc-policy {
+  margin-top: 40px; font-size: 0.8rem; line-height: 1.85;
+  color: rgba(255,255,255,0.45); max-width: 560px; margin-left: auto; margin-right: auto;
+}
+.mc-policy a { color: var(--nude); text-decoration: underline; }
+
+/* 7 nav links + Book Now needs more room than the old 6 did */
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1160px) {
+  .nav-links { gap: 22px; }
+  .nav-links a { font-size: 0.62rem; letter-spacing: 0.13em; }
+  .nav-book { padding: 10px 16px; }
+}
+
+/* below this the row no longer fits, so hand over to the hamburger early */
+@media (max-width: 940px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-book-mobile { display: inline-flex; }
+}
+
+@media (max-width: 900px) {
+  .mc-product-grid { grid-template-columns: 1fr; gap: 44px; }
+  .mc-buy { position: static; }
+  .mc-learn-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .mc-product, .mc-intro, .mc-learn, .mc-closing { padding-left: 24px; padding-right: 24px; }
+  .mc-sponsors { padding: 60px 24px; }
+  .mc-learn-grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .mc-learn-item { padding: 32px 26px; }
+  .mc-price { font-size: 2.6rem; }
+  .mc-details .lbl { flex-basis: 76px; }
+  .mc-swiper .mc-arrow { display: none; }
+}

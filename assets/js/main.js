@@ -239,3 +239,26 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     );
   }
 }
+
+/* --- MASTERCLASS GALLERY --- */
+const mcSwiperEl = document.querySelector('.mc-swiper');
+if (mcSwiperEl && typeof Swiper !== 'undefined') {
+  const mcThumbs = new Swiper('.mc-thumbs', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  new Swiper('.mc-swiper', {
+    rewind: true,
+    speed: 600,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.mc-swiper .swiper-button-next',
+      prevEl: '.mc-swiper .swiper-button-prev',
+    },
+    pagination: { el: '.mc-pagination', clickable: true },
+    thumbs: { swiper: mcThumbs },
+  });
+}
