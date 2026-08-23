@@ -1137,6 +1137,21 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
 .mc-details .val { font-size: 1rem; color: var(--black); }
 
 .mc-price-block { margin-bottom: 28px; }
+.mc-earlybird {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px; margin-bottom: 16px;
+  background: var(--cream); border: 1px solid var(--nude);
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.mc-earlybird::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+  background: var(--gold-deep); animation: mc-pulse 1.8s ease-in-out infinite;
+}
+@keyframes mc-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 .mc-price {
   font-family: var(--font-heading); font-size: 3.2rem; line-height: 1; color: var(--black);
 }
