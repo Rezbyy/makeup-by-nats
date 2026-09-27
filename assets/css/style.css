@@ -1135,6 +1135,7 @@ p { font-size: 0.9rem; line-height: 1.9; color: var(--mid-gray); }
   text-transform: uppercase; color: var(--gray); font-weight: 600; padding-top: 4px;
 }
 .mc-details .val { font-size: 1rem; color: var(--black); }
+.mc-details .mc-addr { display: block; margin-top: 3px; font-size: 0.82rem; color: var(--mid-gray); }
 
 .mc-price-block { margin-bottom: 28px; }
 .mc-earlybird {
